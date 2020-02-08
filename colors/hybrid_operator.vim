@@ -76,7 +76,7 @@ endif
 
 let s:style = &background
 
-let g:colors_name = "hybrid"
+let g:colors_name = "hybrid_operator"
 
 "}}}
 " GUI And Cterm Palettes:"{{{

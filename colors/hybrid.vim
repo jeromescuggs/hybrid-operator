@@ -262,7 +262,7 @@ exe "let s:sp_foreground = ' guisp=". s:palette.gui.foreground[s:style] ."'"
 exe "let s:sp_background = ' guisp=". s:palette.gui.background[s:style] ."'"
 exe "let s:sp_selection  = ' guisp=". s:palette.gui.selection[s:style]  ."'"
 exe "let s:sp_line       = ' guisp=". s:palette.gui.line[s:style]       ."'"
-exe "let s:sp_comment    = ' guisp=". s:palette.gui.comment[s:i]    ."'"
+exe "let s:sp_comment    = ' guisp=". s:palette.gui.comment[s:style]    ."'"
 exe "let s:sp_red        = ' guisp=". s:palette.gui.red[s:style]        ."'"
 exe "let s:sp_orange     = ' guisp=". s:palette.gui.orange[s:style]     ."'"
 exe "let s:sp_yellow     = ' guisp=". s:palette.gui.yellow[s:style]     ."'"
@@ -341,7 +341,7 @@ exe "hi! Normal"        .s:fg_foreground  .s:bg_normal      .s:fmt_none
 "}}}
 " Generic Syntax Highlighting: (see :help group-name)"{{{
 " ----------------------------------------------------------------------------
-exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
+exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_ital
 
 exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none

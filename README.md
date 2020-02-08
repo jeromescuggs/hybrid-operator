@@ -1,23 +1,29 @@
-# hybrid.vim
+!hybrid-operator()
 
-A dark colour scheme for Vim that combines the:
+# hybrid operator: a modernized take on the timeless classic 
 
--   Default palette from [Tomorrow-Night](https://github.com/chriskempson/vim-tomorrow-theme).
--   Reduced contrast palette from [Codecademy](https://www.codecademy.com)'s
-    online editor.
--   Syntax group highlighting scheme from [Jellybeans](https://github.com/nanotech/jellybeans.vim)
--   Vimscript from [Solarized](https://github.com/altercation/vim-colors-solarized)
+this is an update of *vim-hybrid*, a fantastic theme from Andrew Wong. his description, from the original repo:
+
+>A dark colour scheme for Vim that combines the:
+>
+>-   Default palette from [Tomorrow-Night](https://github.com/chriskempson/vim-tomorrow-theme).
+>-   Reduced contrast palette from [Codecademy](https://www.codecademy.com)'s
+>    online editor.
+>-   Syntax group highlighting scheme from [Jellybeans](https://github.com/nanotech/jellybeans.vim)
+>-   Vimscript from [Solarized](https://github.com/altercation/vim-colors-solarized)
 
 ## Updates
 
--   05/01/2016: Replaced `let g:hybrid_use_Xresources = 1` in favour of __`let
-    g:hybrid_custom_term_colors = 1`__
--   05/01/2016: Added `let g:hybrid_reduced_contrast = 1`
-
 ## Requirements
 
+the original requirements:
 -   gVim 7.3+ on Linux, Mac and Windows.
 -   Vim 7.3+ on Linux and Mac, using a terminal that supports 256 colours.
+
+to make the best of my tweaks:
+-   a terminal that supports 256 colors, as well as italics. 
+-   WSL/Windows: i haven't tested it on any terminal besides wsltty, aka mintty running wsl-bridge. 
+
 
 ## Installation
 
@@ -40,7 +46,31 @@ A dark colour scheme for Vim that combines the:
     colorscheme hybrid
     ```
 
-## Define custom terminal colours (recommended)
+3. **(Alternate)** If using SpaceVim: 
+
+    add the following to your `init.toml` or `init.vim`:
+    ```vim 
+    [[custom_plugins]]
+    name = "jeromescuggs/vim-hybrid"
+    ```
+
+    restart vim, and let SpaceVim download and install the theme. restart SpaceVim, and either load it manually: 
+
+    ```vim 
+    :colorscheme hybrid 
+    ```
+
+    or set it as the default in `init.toml` / `init.vim`: 
+
+    ```vim 
+    colorscheme = "vim-hybrid"
+    ```     
+
+## Further configuration
+
+the following is from the original README. although I do not need to do anything further after installation, the following might be useful for troubleshooting. 
+
+## Define custom terminal colours 
 
 Due to the limited 256 palette, colours in Vim and gVim will still be slightly
 different.
@@ -92,19 +122,6 @@ is intended) define the basic 16 colours in your terminal.
     let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
     colorscheme hybrid
     ```
-
-## Screenshots
-
-### Default palette on Linux
-
-![vim-help](http://dl.dropbox.com/u/23813887/vim-help.png)
-![vim-python](http://dl.dropbox.com/u/23813887/vim-python.png)
-![vim-markdown](http://dl.dropbox.com/u/23813887/vim-markdown.png)
-![vim-diff](http://dl.dropbox.com/u/23813887/vim-diff.png)
 ![vim-spell](https://dl.dropboxusercontent.com/u/23813887/vim-spell.png)
 
-### Reduced contrast palette on OSX
 
-![vim-reduced1](https://www.dropbox.com/s/57mjs7rfzq1h128/vim-reduced1.png?dl=1)
-![vim-reduced2](https://www.dropbox.com/s/l6nvcm91llfxwjx/vim-reduced2.png?dl=1)
-![vim-reduced3](https://www.dropbox.com/s/838qoahio9klsz6/vim-reduced3.png?dl=1)

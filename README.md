@@ -1,4 +1,4 @@
-!hybrid-operator()
+![hybrid-operator](screens/hybrid.png)
 
 # hybrid operator: a modernized take on the timeless classic 
 

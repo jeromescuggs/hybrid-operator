@@ -97,6 +97,8 @@ else
   let s:gui_comment    = "#707880"
 endif
 
+
+
 let s:palette.gui.background = { 'dark' : s:gui_background , 'light' : "#e4e4e4" }
 let s:palette.gui.foreground = { 'dark' : "#c5c8c6"        , 'light' : "#000000" }
 let s:palette.gui.selection  = { 'dark' : s:gui_selection  , 'light' : "#bcbcbc" }
@@ -422,33 +424,28 @@ hi! link diffAdded Special
 let &background = s:style
 
 " }}}
-" Legal:"{{{
-" ----------------------------------------------------------------------------
-" Copyright (c) 2011 Ethan Schoonover
-" Copyright (c) 2009-2012 NanoTech
-" Copyright (c) 2012 w0ng
-"
-" Permission is hereby granted, free of charge, to any per‐
-" son obtaining a copy of this software and associated doc‐
-" umentation files (the “Software”), to deal in the Soft‐
-" ware without restriction, including without limitation
-" the rights to use, copy, modify, merge, publish, distrib‐
-" ute, sublicense, and/or sell copies of the Software, and
-" to permit persons to whom the Software is furnished to do
-" so, subject to the following conditions:
-"
-" The above copyright notice and this permission notice
-" shall be included in all copies or substantial portions
-" of the Software.
-"
-" THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY
-" KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-" THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICU‐
-" LAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-" DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CON‐
-" TRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CON‐
-" NECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-" THE SOFTWARE.
+" [
+"    \ [ a_guifg,  a_guibg,  a_ctermfg,  a_ctermbg],
+"    \ [ b_guifg,  b_guibg,  b_ctermfg,  b_ctermbg],
+"    \ [ c_guifg,  c_guibg,  c_ctermfg,  c_ctermbg],
+"    \ [ z_guibg,  z_ctermbg],
+"    \ [ i_guifg,  i_guibg,  i_ctermfg,  i_ctermbg],
+"    \ [ v_guifg,  v_guibg,  v_ctermfg,  v_ctermbg],
+"    \ [ r_guifg,  r_guibg,  r_ctermfg,  r_ctermbg],
+"    \ [ ii_guifg, ii_guibg, ii_ctermfg, ii_ctermbg],
+"    \ [ in_guifg, in_guibg, in_ctermfg, in_ctermbg],
+" \ ]
 
-" }}}
+function! SpaceVim#mapping#guide#theme#hybrid#palette() abort
+    return [
+                \ ['#d7ffaf', '#5F875F', 193, 65],
+                \ ['#ffffff', '#373b41', 231, 22],
+                \ ['#ffffff', '#282a2e', 231, 237],
+                \ ['#4e4e4e', 239],
+                \ ['#c5c8c6', '#81a2be', 193, 110],
+                \ ['#c5c8c6', '#cc6666', 231, 167],
+                \ ['#d7d7ff', '#5f5f87', 88, 0],
+                \ ['#ffffff', '#689d6a', 231, 72],
+                \ ['#ffffff', '#8f3f71', 231, 132],
+                \ ]
+endfunction
